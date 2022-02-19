@@ -9,7 +9,7 @@ const {
 jest.mock('fs');
 
 test('create a zookeepr object', () => {
-    const zookeeper = createNewZookeeper({ name: 'Darlene', id: 'jhgdja3ng2' }, animals);
+    const zookeeper = createNewZookeeper({ name: 'Darlene', id: 'jhgdja3ng2' }, []);
 
     expect(zookeeper.name).toBe('Darlene');
     expect(zookeeper.id).toBe('jhgdja3ng2');
@@ -55,11 +55,11 @@ test('create a zookeepr object', () => {
   
     const result = findById('3', startingZookepers);
   
-    expect(result.name).toBe('Rashka');
+    expect(result.name).toBe('Raksha');
   });
 
   test('validates age', () => {
-    const ValidZookeper = {
+    const ValidZookeeper = {
             id: '3',
             name: 'Raksha',
             age: 31,
